@@ -164,6 +164,14 @@ Windows WireGuard expects a `.conf` file. Once imported, you can toggle the tunn
 3. Select `client1.conf`.
 4. A new tunnel appears in the list—toggle it to **Activate**.
 
+
+![import_on_mac](assets/images/import_on_mac.png)
+
+
+!!! example "Example"
+
+    The above screenshot shows how to import tunnel from file on macOS.
+
 ### Why This Step?
 macOS works similarly to Windows: you import the config file to create a new WireGuard tunnel.
 
