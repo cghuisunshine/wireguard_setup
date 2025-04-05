@@ -213,7 +213,21 @@ qrencode -t ansiutf8 < client1.conf
 Then in the WireGuard mobile app:
 1. Tap **Add**.
 2. Choose **Scan from QR Code**.
-3. Point your camera at the terminal output.
+3. Point your camera at the terminal output or image of screenshot.
+
+![config_android_1](assets/images/config_android_1.jpg)
+
+
+!!! tip "Tip"
+
+    On anroid wireguard app, click + at the right bottom corner to add a new tunnel.
+
+![config_android_2](assets/images/config_android_2.jpg)
+
+
+!!! tip "Tip"
+
+    Then , click "scan from QR code" and then point to the QR code image.
 
 ### Why This Step?
 Scanning a QR code is often easier than manually transferring a `.conf` file to your phone.
@@ -246,7 +260,7 @@ This is how you **actually connect** the client to the server via the WireGuard 
    ping 10.8.0.1 -c 3
    ```
 2. **Check IP** (if routing all traffic):
-   - Visit an IP-checker site. It should show your **server’s** public IP if the tunnel is up.
+   - Visit an IP-checker site(like https://www.whatsmyip.org/). It should show your **server’s** public IP if the tunnel is up.
 3. **View “latest handshake”** on the server:
    ```bash
    sudo wg
@@ -263,6 +277,13 @@ This is how you **actually connect** the client to the server via the WireGuard 
 !!! example "Example"
 
     The above screenshot shows a successful connection to the server through the tunnel.
+
+   ![check_connection](assets/images/check_connection.png)
+
+
+!!! example "Example"
+
+   The screenshot above demonstrates a successful connection. By visiting [whatsmyip.org](https://www.whatsmyip.org/), it confirms that the public IP address now reflects the server’s IP address. 
 
 
 ### Why This Step?
