@@ -1,9 +1,13 @@
 # Troubleshooting Guide
 
-| Issue                   | Solution                                              |
-|-------------------------|-------------------------------------------------------|
-| **Connection fails**    | Open UDP port `51820` on the server firewall.         |
-| **No internet access**  | Enable IP forwarding: `sysctl -p`.                    |
-| **Key mismatch**        | Regenerate and replace keys.                          |
-| **QR code won’t scan**  | Ensure `client.conf` has no typos.                    |
-| **Slow speeds**         | Check server bandwidth or ISP throttling.             |
+| Issue                    | Description                                                        | Solution                                                                                                                                                 |
+|--------------------------|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Connection fails**     | VPN connection attempts fail to establish.                        | Open UDP port `51820` on the server firewall.                                                                                                             |
+| **No internet access**   | Devices connected to the VPN cannot access the internet.         | Enable IP forwarding by running `sysctl -p` to apply the necessary kernel settings.                                                                       |
+| **Key mismatch**         | The cryptographic keys between peers do not match.                 | Regenerate the keys and replace them on both the client and the server to ensure consistency.                                                               |
+| **QR code won’t scan**   | The QR code generated for the client configuration is unscannable. | Verify that the `client.conf` file is correctly formatted and contains no typos.                                                                           |
+| **Slow speeds**          | Network performance is below expectations.                         | Check for server bandwidth limitations or potential ISP throttling; consider adjusting MTU settings if packet fragmentation is an issue.                   |
+| **Handshake failure**    | The initial cryptographic handshake does not complete.             | Review WireGuard logs, confirm system time synchronization, and validate that the keys are correctly configured.                                            |
+| **Encryption errors**    | Data encryption is failing during transmission.                    | Recheck the key generation process and ensure that all keys are complete and correctly set up on both ends of the connection.                                |
+| **Routing issues**       | Traffic is not being routed properly through the VPN tunnel.       | Verify that the `AllowedIPs` are correctly defined and ensure that the routing table settings on the device are accurate and compatible with the VPN setup. |
+                               |
