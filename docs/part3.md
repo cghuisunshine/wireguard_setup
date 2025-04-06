@@ -148,9 +148,16 @@ Your **client device** needs a local copy of `client1.conf` so it can import or 
 ## Step 7: Import on Windows
 
 1. **Launch WireGuard** on Windows.
-2. Click **Import Tunnel(s)** (or `Add Tunnel > Import from file`).
+2. Click **Import Tunnel(s) from file** (or `Add Tunnel > Import from file`).
 3. Browse to `client1.conf` and click **Open**.
 4. You should see a new tunnel in the list, typically named after the file.
+
+![import_on_windows](assets/images/import_on_windows.png)
+
+
+!!! example "Example"
+
+    The above screenshot shows how to import tunnel from file on Windows.
 
 ### Why This Step?
 Windows WireGuard expects a `.conf` file. Once imported, you can toggle the tunnel “on” to connect.
@@ -226,14 +233,14 @@ Then in the WireGuard mobile app:
 ![config_android_1](assets/images/config_android_1.jpg)
 
 
-!!! tip "Tip"
+!!! example "Example"
 
     On anroid wireguard app, click + at the right bottom corner to add a new tunnel.
 
 ![config_android_2](assets/images/config_android_2.jpg)
 
 
-!!! tip "Tip"
+!!! example "Example"
 
     Then , click "scan from QR code" and then point to the QR code image.
 
@@ -247,12 +254,25 @@ Scanning a QR code is often easier than manually transferring a `.conf` file to 
 - **Windows/macOS**: Toggle the tunnel to **ON** or **Activate**.
 - **Linux**: `sudo wg-quick up /etc/wireguard/client1.conf`
 - **iOS/Android**: Tap the “Activate” or “Connect” slider.
+
+![activate_on_windows](assets/images/activate_on_windows.png)
+
+
+!!! example "Example"
+
+    The above screenshot is from Windows.
+
 ![activate_on_mac](assets/images/activate_on_mac.png)
+
+
+!!! example "Example"
+
+    The above screenshot is from macOS.
 
 
 !!! tip "Tip"
 
-    The above screenshot is from macOS; other types of devices offer similar operations to activate the tunnel.
+    Other types of devices offer similar operations to activate the tunnel.
 
 
 
